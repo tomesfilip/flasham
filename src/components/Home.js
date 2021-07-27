@@ -1,10 +1,10 @@
 import MainHeading from '../atoms/MainHeading';
-import HomeButtons from '../moleculs/HomeButtons';
+import HomeButtons from '../molecules/HomeButtons';
 
 const Home = () => {
   return ( 
     <div className="home">
-      <MainHeading headingText="QUIZAM" />
+      <MainHeading headingText="FLASHAM" />
       <HomeButtons />
     </div>
   );
