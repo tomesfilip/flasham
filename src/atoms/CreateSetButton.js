@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const CreateSetButton = () => {
   return (  
-    <Link>
-      <button>create set</button>
+    <Link to="/">
+      <button className="create-set-button">create set</button>
     </Link>
   );
 }

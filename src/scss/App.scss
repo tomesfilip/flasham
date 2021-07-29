@@ -13,6 +13,10 @@ body {
   background-color: $black-cofee;
 }
 
+button, a {
+  cursor: pointer;
+}
+
 .home {
   width: 100%;
   height: 100vh;
@@ -41,6 +45,54 @@ body {
   }
 }
 
+.create-cards {
+  width: 100%;
+  height: 100vh;
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+    .mid-inputs {
+      width: 60%;
+      height: 72Vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      .question-input, .answer-input {
+        width: 100%;
+        font-family: Manrope;
+        font-size: 1.25rem;
+        font-weight: 400;
+        border-bottom: 2px solid white;
+      }
+    }
+  }
+  input {
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+  .create-cards-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+    align-items: center;
+
+    .cards-counter {
+      width: 300px;
+      color: white;
+      font-size: 3rem;
+      font-weight: 900;
+    }
+  }
+}
+
 .action-btn {
   color: white;
   background-color: $olive-drab;
@@ -52,4 +104,40 @@ body {
   margin-top: 2rem;
   outline: none;
   border: 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.card-set-heading {
+  color: $chrome-yellow;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.cardset-title-input {
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: 900;
+  width: 40%;
+  line-height: 1;
+  height: 2.5rem;
+
+  &::placeholder {
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+}
+
+.create-set-button {
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+  outline: none;
+  border: 0;
+  font-weight: 900;
 }
