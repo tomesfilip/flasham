@@ -1,15 +1,17 @@
-import Loader from 'react-loader-spinner';
+import Loader from 'react-loader-spinner'
 import useFetch from '../hooks/useFetch'
+import CardSetList from '../molecules/CardSetList'
 
 const Choose = () => {
   const { data: cardSets, isPending, error } = useFetch('http://localhost:8000/cardSets')
 
+  console.log(cardSets)
+
   return ( 
     <div className="choose-cards">
-      <h2>choose card sets</h2>
-      { error && <div className="error-mgs">{ error }</div> }
+      { error && <div className="error-msg">{ error }</div> }
       { isPending && <Loader type="ThreeDots" color="#FAA613" width={80} height={80} /> }
-      { cardSets && <CardSetsList cardSets={cardSets} /> }
+      { cardSets && <CardSetList cardSets={cardSets} /> }
     </div>
   );
 }

@@ -17,11 +17,22 @@ button, a {
   cursor: pointer;
   border: 0;
   background: transparent;
+  text-decoration: none;
+}
+
+.home, .create-cards, .choose-cards {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .home {
-  width: 100%;
-  height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -48,30 +59,20 @@ button, a {
 }
 
 .create-cards {
-  width: 100%;
-  height: 100vh;
-
-  .container {
-    width: 100%;
+  .card-form {
+    width: 60%;
+    height: 72Vh;
     display: flex;
-    justify-content: center;
-    padding: 1rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
-    .card-form {
-      width: 60%;
-      height: 72Vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-
-      .question-input, .answer-input {
-        width: 100%;
-        font-family: Manrope;
-        font-size: 1.25rem;
-        font-weight: 400;
-        border-bottom: 2px solid white;
-      }
+    .question-input, .answer-input {
+      width: 100%;
+      font-family: Manrope;
+      font-size: 1.25rem;
+      font-weight: 400;
+      border-bottom: 2px solid white;
     }
   }
   input {
@@ -141,5 +142,41 @@ button, a {
   font-size: 2rem;
   outline: none;
   border: 0;
+  font-weight: 900;
+}
+
+.choose-cards {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .cardset-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .cardset-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 24%;
+    height: 8rem;
+    padding: 1rem;
+    border: 10px solid $chrome-yellow;
+    border-radius: 2rem;
+
+    h2 {
+      color: $chrome-yellow;
+    }
+  }
+}
+
+.error-msg {
+  color: red;
+  font-size: 2rem;
   font-weight: 900;
 }
