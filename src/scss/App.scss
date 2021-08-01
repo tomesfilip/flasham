@@ -15,6 +15,8 @@ body {
 
 button, a {
   cursor: pointer;
+  border: 0;
+  background: transparent;
 }
 
 .home {
@@ -55,7 +57,7 @@ button, a {
     justify-content: center;
     padding: 1rem;
 
-    .mid-inputs {
+    .card-form {
       width: 60%;
       height: 72Vh;
       display: flex;
@@ -112,7 +114,7 @@ button, a {
   width: 200px;
 }
 
-.card-set-heading {
+.card-form-heading {
   color: $chrome-yellow;
   font-size: 3rem;
   font-weight: 900;
