@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 import AddCardButton from "../atoms/AddCardButton";
 import CardFormHeading from "../atoms/CardFormHeading";
 import CreateSetButton from "../atoms/CreateSetButton";
-import Controls from "../molecules/Controls";
 
 const CreateCards = () => {
   const [cardsetTitle, setCardsetTitle] = useState('')
@@ -28,7 +27,6 @@ const CreateCards = () => {
           <CardFormHeading headingText="ANSWER" />
           <input type="text" className="answer-input" onChange={ e => setAnswer(e.target.value) } />
           <AddCardButton />
-          <Controls />
         </form>
       </div>
       <div className="create-cards-footer">
@@ -38,4 +36,4 @@ const CreateCards = () => {
     </div>
   );
 }
-export default CreateCards;
+export default CreateCards

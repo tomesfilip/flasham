@@ -3,6 +3,7 @@ import CreateCards from './components/CreateCards'
 import Choose from './components/Choose'
 import Home from './components/Home'
 import NotFound from './components/NotFound'
+import CardSetDetail from './components/CardSetDetail'
 import './scss/App.scss'
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route exact path="/choose">
             <Choose />
+          </Route>
+          <Route path="/cardset/:id">
+            <CardSetDetail />
           </Route>
           <Route path="*">
             <NotFound />
