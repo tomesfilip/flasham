@@ -1,25 +1,9 @@
-import { useEffect, useState } from 'react'
-
-const Card = ({ card }) => {
-  const [cardText, setCardText] = useState('')
-  const [isQuestion, setIsQuestion] = useState(true)
-
-  const handleCardFlip = () => {
-    setCardText(isQuestion ?  card.answer : card.question)
-    setIsQuestion(isQuestion => !isQuestion)
-  }
-
-  useEffect(() => {
-    setCardText(card.question)
-  }, [card.question])
-
+const Card = props => {
   return ( 
-    <div className="card" onClick={ handleCardFlip }>
-      <div className="question-answer">
-        { cardText }
-      </div>
+    <div className="card" onClick={ props.clickHandler }>
+      { props.children }
     </div>
   );
 }
 
-export default Card
+export default Card;
